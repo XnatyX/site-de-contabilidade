@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão Contábil</title>
+  <link rel="icon" type="image/png" href="imagens/iconeMTFD.png">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('imagens/fundo.png');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: rgba(105, 29, 71, 0.85);
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+      width: 25px;
+    }
+
+    nav {
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin-right: 20px;
+    }
+
+    nav ul li button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      padding: 10px 15px;
+      transition: 0.3s;
+    }
+
+    nav ul li button:hover {
+      background: white;
+      color: #691d47;
+      border-radius: 5px;
+    }
+
+    main {
+      flex: 1;
+      padding: 40px 20px;
+      color: #fff;
+      text-shadow: 1px 1px 2px black;
+      text-align: center;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .social-icons img {
+      transition: transform 0.3s;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.1);
+    }
+
+    footer {
+      color: white;
+      text-align: center;
+      padding: 5px 0;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav ul {
+        flex-direction: column;
+        background-color: rgba(105, 29, 71, 0.95);
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        padding-top: 60px;
+        display: flex;
+        transition: left 0.3s ease;
+        z-index: 1000;
+        margin: 0;
+      }
+
+      nav ul.show {
+        left: 0;
+      }
+
+      nav ul li {
+        text-align: center;
+        padding: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav>
+      <ul id="menu-h">
+        <li><button onclick="goTo('sobre.html')">Serviços</button></li>
+        <li><button onclick="goTo('quemsomos.html')">Quem Somos</button></li>
+        <li><button onclick="goTo('localizacao.html')">Localização</button></li>
+        <li><button onclick="goTo('index.html')">Entrar</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>    </h1>
+    <p>    </p>
+  </main>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/angelica.dossantosminasi" target="_blank">
+        <img src="imagens/facebook.png" alt="Facebook" width="40" height="40">
+      </a>
+      <a href="https://www.instagram.com/angelica_minasi" target="_blank">
+        <img src="imagens/instagram.png" alt="Instagram" width="40" height="40">
+      </a>
+      <a href="https://w.app/6kelsc" target="_blank">
+        <img src="imagens/whatsapp.png" alt="WhatsApp" width="40" height="40">
+      </a>
+    </div>
+    <p>© 2025 Angélica Minasi - Gestão Contábil</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu-h');
+      menu.classList.toggle('show');
+    }
+
+    function goTo(page) {
+      window.location.href = page;
+    }
+  </script>
+
+</body>
+</html>

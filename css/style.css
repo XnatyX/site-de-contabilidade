@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+
+/* Fonte aplicada no corpo da página */
+body {
+    font-family: "Cal Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Zerar e ajustar todos os elementos */
+* {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+/* MENU HORIZONTAL */
+#menu-h {
+    list-style: none;
+    background-color: rgba(105, 29, 71, 0.75); /* vinho com transparência */
+    text-align: right;
+}
+
+#menu-h li {
+    display: inline-block;
+}
+
+#menu-h li a {
+    color: #fffafa;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+/* HOVER DO LINK */
+#menu-h li a:hover {
+    background-color: #fff;
+    color: #691d47;
+    font-weight: bold;
+}
